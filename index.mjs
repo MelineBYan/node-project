@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
     fs.readFile(page, 'utf-8', (err, data) => {
         if (err) {
             res.writeHead(404, {'Content-Type': 'text/plain'});
-            res.write('File Not found!');
+            res.write('Something went wrong!');
             res.end();
         }
         res.writeHead(200, {'Content-Type': 'text/html'});
