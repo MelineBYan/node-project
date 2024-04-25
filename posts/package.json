@@ -20,7 +20,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@meline1/common": "^1.0.7",
+    "@meline1/common": "^1.0.10",
     "@voskan/context-aware-logger": "^1.0.21",
     "express": "^4.19.2",
     "express-async-errors": "^3.1.1",

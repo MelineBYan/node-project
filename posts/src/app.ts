@@ -8,6 +8,7 @@ import {
 } from "@voskan/context-aware-logger";
 import { NotFoundError, errorHandler } from "@meline1/common";
 import { createPostRouter } from "./routes/new";
+import { showPostRouter } from "./routes/show";
 
 const app = express();
 const logger = new Logger();
@@ -17,6 +18,7 @@ app.use(json());
 app.use(createLoggerMiddleware(logger));
 
 app.use(createPostRouter);
+app.use(showPostRouter);
 
 app.all("*", async () => {
     throw new NotFoundError();
